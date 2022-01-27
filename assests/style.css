@@ -2,8 +2,12 @@
 
 body {
     padding: 0;
-    margin: 0px 5%;
+    margin: 0;
     font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --mainColor: #F5F5F5;
 }
 
 
@@ -11,10 +15,13 @@ body {
 
 
 header {
+    padding: 3%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
+    font-size: 0.7rem;
+    background-color: var(--mainColor);
 }
 
     header h1 {
@@ -22,20 +29,19 @@ header {
     }
 
     header nav {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: flex-start;
+        display: inline-block;
+        flex-flow: row nowrap;
+        align-items: flex-end;
         justify-content: center;
     }   
-
-
-        header ul {
+        header nav ul {
             list-style: none;
             text-align: center;
-            display: flex;
-            justify-content: flex-end;
+            display: none;
+            position: relative;
         }
             header ul li {
+                position: relative;
                 padding: 2%;
                 display: inline-block;
                 color: #828282;
@@ -60,7 +66,8 @@ main {
 
 .showcase {
     height: 25%;
-    width: 100%;
+    width: 90%;
+    margin: 0% 5%;
 }
 
     .showcase #product {
@@ -70,6 +77,7 @@ main {
         margin-bottom: 2%;
         border: 2px solid white;
         padding: 10px;
+        background-color: var(--mainColor);
     }
         .showcase #product .productImg {
             display: flex;
@@ -127,7 +135,7 @@ main {
 
 
 .checkoutCart {
-    margin-top: 10%;
+    margin: 10% 5%;
 }
 
     .checkoutCart .SearchBar {
@@ -140,7 +148,7 @@ main {
             width: 75%;
             padding: 4%;
             border: none;
-            background-color: #d3d3d3;
+            background-color: var(--mainColor);
             color: #333333;
             font-size: 16px;
         }
@@ -160,6 +168,7 @@ main {
         flex-flow: column nowrap;
         align-items: center;
         justify-content: center;
+        background-color: var(--mainColor);
     }
         .checkoutCart .checkoutCartList .checkoutCartHeader {
             width: 100%;
@@ -188,7 +197,7 @@ main {
 
 
 
-/* --------------------------------- EXTRAS --------------------------------- */
+/* --------------------------------- HOVERS --------------------------------- */
 
 
 .showcase #product:hover {
@@ -208,3 +217,113 @@ header ul li:hover {
 .checkoutCart .SearchBar #searchInput:focus {
     color: #6B54DE;
 }
+
+.dropdownMenu:hover .menu {
+    display: block;
+  }
+
+.dropdownMenu:hover span {
+    display: none;
+}
+
+/* ----------------------------------- END ---------------------------------- */
+
+
+
+/* ------------------------------ MEDIA QUERIES ----------------------------- */
+
+
+@media only screen and (min-width: 600px) {
+
+    header {
+        padding: 0%;
+        justify-content: space-between;
+    }
+
+        header h1 {
+            font-size: 30px;
+            margin: 0;
+            padding: 0 8%;
+        }
+
+        header nav {
+            font-size: 16px;
+            width: 50%;
+        }
+           header nav span {
+               display: none;
+           }
+
+
+           header nav ul {
+               display: block;
+           }
+
+    main {
+        width: 100%;
+        flex-flow: row nowrap;
+    }
+
+    .showcase {
+        display: flex;
+        flex-flow: row wrap;
+        width: 70%;
+        background-color: var(--mainColor);
+        margin-right: 0;
+        max-height: 100vh;
+    }
+
+        .showcase #product {
+            display: flex;
+            width: 27%;
+            margin: 10px;
+        }
+
+        .showcase #product .productImg {  
+            height: 50%;
+            width: 80%;
+        }
+            .showcase #product .productImg img {
+                height: 100%;
+                width: 100%;
+            }
+                .productImgArea {
+                    align-self: center;
+                }
+
+        .showcase #product .productInfoArea {
+            height: 70%;  
+        }
+
+            .showcase #product .productInfoArea .productName {
+                font-size: 18px;
+            }
+
+            .showcase #product .productInfoArea .productDescription {
+            font-size: 12px;
+            }
+
+            .showcase #product .productInfoArea #CheckoutAddBtn {
+                font-size: 12px;
+            }
+        
+    .checkoutCart {
+        width: 30%;
+        margin: 0%;
+        padding: 2%;
+    }
+        .checkoutCart .SearchBar {
+            width: 100%;
+        }
+            .checkoutCart .SearchBar #searchInput {
+                width: 70%;
+            }
+            .checkoutCart .SearchBar #SearchBtn {
+                width: 30%;
+            }
+
+        .checkoutCart .checkoutCartHeader {
+            width: 100%;
+        }
+}
+
