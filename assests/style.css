@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0px 5%;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* --------------------------------- HEADER --------------------------------- */
+
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    header h1 {
+        padding: 2%;
+    }
+
+    header nav {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: center;
+    }   
+
+
+        header ul {
+            list-style: none;
+            text-align: center;
+            display: flex;
+            justify-content: flex-end;
+        }
+            header ul li {
+                padding: 2%;
+                display: inline-block;
+                color: #828282;
+            }
+
+
+/* ----------------------------------- END ---------------------------------- */
+
+
+
+/* ---------------------------------- MAIN ---------------------------------- */
+
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+/* ---------------------------- SECTION SHOWCASE ---------------------------- */
+
+
+.showcase {
+    height: 25%;
+    width: 100%;
+}
+
+    .showcase #product {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        margin-bottom: 2%;
+        border: 2px solid white;
+        padding: 10px;
+    }
+        .showcase #product .productImg {
+            display: flex;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            background-color: #F5F5F5;
+        }
+            .showcase #product .productImg img {
+                height: 90%;
+                width: 90%;
+                margin: 0;
+            }
+
+        .showcase #product .productType {
+            background-color: #2E245E;
+            color: white;
+            width: min-content;
+            padding: 2%;
+            margin-top: 3%;
+        }
+
+        .showcase #product .productName {
+            font-weight: bold;
+            font-size: 26px;
+            color: #333333;
+
+        }
+
+        .showcase #product .productDescription {
+            font-size: 16px;
+            color: #828282;
+            margin: 0;
+        }
+
+        .showcase #product .productPrice {
+            color: #2E245E;
+            font-weight: bold;
+        }
+
+        .showcase #product #CheckoutAddBtn {
+            border: none;
+            font-size: 18px;
+            color: #828282;
+            text-decoration: underline;
+            padding: 0;
+        }
+
+
+/* ----------------------------------- END ---------------------------------- */
+
+
+
+/* -------------------------- SECTION CHECKOUT CART ------------------------- */
+
+
+.checkoutCart {
+    margin-top: 10%;
+}
+
+    .checkoutCart .SearchBar {
+        display: flex;
+        flex: row nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+        .checkoutCart .SearchBar #searchInput {
+            width: 75%;
+            padding: 4%;
+            border: none;
+            background-color: #d3d3d3;
+            color: #333333;
+            font-size: 16px;
+        }
+
+        .checkoutCart .SearchBar #SearchBtn {
+            width: 25%;
+            border: none;
+            padding: 4%;
+            border: 1px solid #6B54DE;
+            background-color: #6B54DE;
+            color: white;
+            font-weight: bold;
+        }
+
+    .checkoutCart .checkoutCartList {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+        .checkoutCart .checkoutCartList .checkoutCartHeader {
+            width: 100%;
+            margin: 2%;
+            padding: 3% 0%;
+            text-align: center;
+            background-color: #6B54DE;
+            color: white;
+        }
+
+        .checkoutCart .checkoutCartList h3 {
+            font-weight: bold;
+            padding: 25% 25% 0 25%;
+            margin: 0;
+        }
+
+        .checkoutCart .checkoutCartList h5 {
+            margin: 1% 0% 0% 0%;
+            font-size: 14px;
+            font-weight: 300;
+            color: #828282;
+        } 
+
+
+/* ----------------------------------- END ---------------------------------- */
+
+
+
+/* --------------------------------- EXTRAS --------------------------------- */
+
+
+.showcase #product:hover {
+    border: 2px solid #2E245E;
+}
+
+header ul li:hover {
+    color: #333333;
+    font-weight: bold;
+}
+
+.showcase #product #CheckoutAddBtn:hover {
+    color: #6B54DE;
+    font-weight: bold;
+}
+
+.checkoutCart .SearchBar #searchInput:focus {
+    color: #6B54DE;
+}
