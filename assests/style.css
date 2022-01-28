@@ -21,7 +21,7 @@ header {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     background-color: var(--mainColor);
 }
 
@@ -30,13 +30,16 @@ header {
     }
 
     header nav {
-        display: inline-block;
+        display: flex;
+        flex-flow: row-reverse;
+        width: 70%;
     }   
         header nav ul {
             list-style: none;
             text-align: center;
             display: none;
             position: relative;
+            width: 90%;
         }
             header ul li {
                 position: relative;
@@ -76,22 +79,22 @@ main {
         border: 2px solid white;
         padding: 10px;
         background-color: var(--mainColor);
+        margin: 1%;
     }
         .showcase #product .productImg {
             display: flex;
             margin: 0;
             align-items: center;
             justify-content: center;
-            background-color: #F5F5F5;
+            background-color: var(--mainColor);
         }
             .showcase #product .productImg img {
-                height: 90%;
-                width: 90%;
-                margin: 0;
+                height: 100%;
+                width: 100%;
             }
 
         .showcase #product .productType {
-            background-color: #2E245E;
+            background-color: #753D3C;
             color: white;
             width: min-content;
             padding: 2%;
@@ -112,7 +115,7 @@ main {
         }
 
         .showcase #product .productPrice {
-            color: #2E245E;
+            color: #753D3C;
             font-weight: bold;
         }
 
@@ -123,7 +126,9 @@ main {
             text-decoration: underline;
             padding: 0;
         }
-
+            .showcase #product .productInfoArea {
+                background-color: var(--mainColor);
+            }
 
 /* ----------------------------------- END ---------------------------------- */
 
@@ -141,6 +146,7 @@ main {
         flex: row nowrap;
         align-items: center;
         justify-content: center;
+        margin-bottom: 5%;
     }
         .checkoutCart .SearchBar #searchInput {
             width: 75%;
@@ -155,8 +161,8 @@ main {
             width: 25%;
             border: none;
             padding: 4%;
-            border: 1px solid #6B54DE;
-            background-color: #6B54DE;
+            border: 1px solid #A65F5A;
+            background-color: #A65F5A;
             color: white;
             font-weight: bold;
         }
@@ -165,15 +171,14 @@ main {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        justify-content: center;
         background-color: var(--mainColor);
+        height: 70%;
     }
-        .checkoutCart .checkoutCartList .checkoutCartHeader {
+        .checkoutCart .checkoutCartHeader {
             width: 100%;
-            margin: 2%;
             padding: 3% 0%;
             text-align: center;
-            background-color: #6B54DE;
+            background-color: #A65F5A;
             color: white;
         }
 
@@ -199,7 +204,7 @@ main {
 
 
 .showcase #product:hover {
-    border: 2px solid #2E245E;
+    border: 2px solid #753D3C;
 }
 
 header ul li:hover {
@@ -208,12 +213,12 @@ header ul li:hover {
 }
 
 .showcase #product #CheckoutAddBtn:hover {
-    color: #6B54DE;
+    color: #A65F5A;
     font-weight: bold;
 }
 
 .checkoutCart .SearchBar #searchInput:focus {
-    color: #6B54DE;
+    color: #A65F5A;
 }
 
 .dropdownMenu:hover .menu {
@@ -252,22 +257,23 @@ header ul li:hover {
                display: none;
            }
 
-
            header nav ul {
                display: block;
                text-align: end;
                margin: 0% 3% 0% 3%;
            }
 
+
     main {
         width: 100%;
         flex-flow: row nowrap;
     }
 
+
     .showcase {
         display: flex;
         flex-flow: row wrap;
-        width: 70%;
+        width: 100%;
         margin-right: 0;
         max-height: 100vh;
     }
@@ -275,7 +281,6 @@ header ul li:hover {
         .showcase #product {
             display: flex;
             width: 27%;
-            margin: 10px;
         }
 
         .showcase #product .productImg {  
@@ -283,7 +288,7 @@ header ul li:hover {
         }
             .showcase #product .productImg img {
                 height: 100%;
-                width: 70%;
+                width: 65%;
             }
                 .productImgArea {
                     align-self: center;
@@ -332,8 +337,15 @@ header ul li:hover {
                 width: 30%;
             }
 
+
         .checkoutCart .checkoutCartHeader {
             width: 100%;
+            margin: 0;
         }
+        
 }
+  
 
+
+
+/* ----------------------------------- END ---------------------------------- */
