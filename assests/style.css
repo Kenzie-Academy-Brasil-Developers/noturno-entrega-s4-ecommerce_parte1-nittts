@@ -4,6 +4,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
+    height: 100vh;
 }
 
 :root {
@@ -30,9 +31,6 @@ header {
 
     header nav {
         display: inline-block;
-        flex-flow: row nowrap;
-        align-items: flex-end;
-        justify-content: center;
     }   
         header nav ul {
             list-style: none;
@@ -243,7 +241,7 @@ header ul li:hover {
         header h1 {
             font-size: 30px;
             margin: 0;
-            padding: 0 8%;
+            padding: 0 6%;
         }
 
         header nav {
@@ -257,6 +255,8 @@ header ul li:hover {
 
            header nav ul {
                display: block;
+               text-align: end;
+               margin: 0% 3% 0% 3%;
            }
 
     main {
@@ -268,7 +268,6 @@ header ul li:hover {
         display: flex;
         flex-flow: row wrap;
         width: 70%;
-        background-color: var(--mainColor);
         margin-right: 0;
         max-height: 100vh;
     }
@@ -280,33 +279,44 @@ header ul li:hover {
         }
 
         .showcase #product .productImg {  
-            height: 50%;
-            width: 80%;
+            width: 100%;
         }
             .showcase #product .productImg img {
                 height: 100%;
-                width: 100%;
+                width: 70%;
             }
                 .productImgArea {
                     align-self: center;
                 }
 
         .showcase #product .productInfoArea {
-            height: 70%;  
+            height: 70%;
         }
+            .showcase #product .productInfoArea .productType {
+                font-size: 12px;
+            }
 
             .showcase #product .productInfoArea .productName {
-                font-size: 18px;
+                font-size: 14px;
             }
 
             .showcase #product .productInfoArea .productDescription {
-            font-size: 12px;
+            font-size: 10px;
+            }
+
+            .showcase #product .productInfoArea .productPrice {
+                font-size: 12px;
             }
 
             .showcase #product .productInfoArea #CheckoutAddBtn {
-                font-size: 12px;
+                font-size: 10px;
             }
         
+                .showcase #product .productInfoArea .productTextArea {
+                    margin: 5px;
+                }
+
+
     .checkoutCart {
         width: 30%;
         margin: 0%;
