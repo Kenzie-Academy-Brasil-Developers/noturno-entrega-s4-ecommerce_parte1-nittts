@@ -9,7 +9,9 @@ body {
 
 :root {
     --mainColor: #F5F5F5;
-}
+    --darkPurle: #2E245E;
+    --lightPurple: #6B54DE;
+}   
 
 
 /* --------------------------------- HEADER --------------------------------- */
@@ -94,7 +96,7 @@ main {
             }
 
         .showcase #product .productType {
-            background-color: #753D3C;
+            background-color: var(--darkPurle);
             color: white;
             width: min-content;
             padding: 2%;
@@ -115,7 +117,7 @@ main {
         }
 
         .showcase #product .productPrice {
-            color: #753D3C;
+            color: var(--darkPurle);
             font-weight: bold;
         }
 
@@ -161,8 +163,8 @@ main {
             width: 25%;
             border: none;
             padding: 4%;
-            border: 1px solid #A65F5A;
-            background-color: #A65F5A;
+            border: 1px solid var(--lightPurple);
+            background-color: var(--lightPurple);
             color: white;
             font-weight: bold;
         }
@@ -178,7 +180,7 @@ main {
             width: 100%;
             padding: 3% 0%;
             text-align: center;
-            background-color: #A65F5A;
+            background-color: var(--lightPurple);
             color: white;
         }
 
@@ -204,7 +206,7 @@ main {
 
 
 .showcase #product:hover {
-    border: 2px solid #753D3C;
+    border: 2px solid var(--darkPurle);
 }
 
 header ul li:hover {
@@ -213,12 +215,12 @@ header ul li:hover {
 }
 
 .showcase #product #CheckoutAddBtn:hover {
-    color: #A65F5A;
+    color: var(--lightPurple);
     font-weight: bold;
 }
 
 .checkoutCart .SearchBar #searchInput:focus {
-    color: #A65F5A;
+    color: var(--lightPurple);
 }
 
 .dropdownMenu:hover .menu {
